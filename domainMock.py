@@ -5,6 +5,7 @@ from domainInsercion import insertarDatos
 from pokemon import pokebase
 from entrenador import entrenadorbase
 
+
 class testMockDomain(unittest.TestCase):
     
     
