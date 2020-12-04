@@ -3,8 +3,9 @@ from unittest import TestCase
 from unittest.mock import patch, Mock
 from baseConection import *
 from entrenador import entrenadorbase
+import unittest
 
-class TestOperaciones(TestCase):
+class TestOperaciones(unittest.TestCase):
     @patch("baseConection.DataBaseInteract.insert_user", autospec=True)
     def test_insert_user(self, MockUser):
         MockUser.return_value = True
@@ -142,3 +143,6 @@ class TestOperaciones(TestCase):
     #     base = DataBaseInteract()
     #     real = base.("oli")
     #     self.assertEqual(esperado, real)
+    
+if __name__ == "__main__":
+    unittest.main()

@@ -1,8 +1,9 @@
 from unittest import TestCase
 from unittest.mock import patch, Mock
 from PokeApi import PokeApi
+import unittest
 
-class TestOperaciones(TestCase):
+class TestOperaciones(unittest.TestCase):
 
     @patch("PokeApi.PokeApi.write_pokemon_list", autospec = True)
     def test_write_pokemon_list(self, MockWrite):
@@ -43,3 +44,7 @@ class TestOperaciones(TestCase):
         poke = PokeApi()
         real = poke.create_pokemon(1, "jombalash")
         self.assertEqual(esperado, real)
+        
+        
+if __name__ == "__main__":
+    unittest.main()
