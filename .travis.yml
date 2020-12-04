@@ -1,6 +1,5 @@
 language : python
 python:
   - 3.8
-cache: pip
-install : "pip3 install pyodbc"
+
 script: python3 domainMock.py
