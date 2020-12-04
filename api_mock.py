@@ -5,26 +5,19 @@ import unittest
 
 class TestOperaciones(unittest.TestCase):
 
-    @patch("PokeApi.PokeApi.write_pokemon_list", autospec = True)
-    def test_write_pokemon_list(self, MockWrite):
-        MockWrite.return_value = 151
-        poke = PokeApi()
-        esperado = 151
-        real = poke.write_pokemon_list("oli")
-        self.assertEqual(esperado, real)
 
     @patch("PokeApi.PokeApi.write_move_list", autospec = True)
     def test_write_move_list(self, MockMove):
         MockMove.return_value = """1 bailar el tucanazo,
                                 2 oler a limón,
                                 3 comer helado,
-                                4 fumar un porro
+                                4 caminar
                                 """
 
         esperado = """1 bailar el tucanazo,
                                 2 oler a limón,
                                 3 comer helado,
-                                4 fumar un porro
+                                4 caminar
                                 """
         poke = PokeApi()
         real = poke.write_move_list(poke)
