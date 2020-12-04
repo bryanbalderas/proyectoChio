@@ -3,6 +3,9 @@ python:
   - 3.8
 services:
   - mysql
-install:
-  - pip3 install pyodbc
+addons:
+  apt:
+    packages:
+    - unixodbc-dev
+
 script: python3 domainMock.py
