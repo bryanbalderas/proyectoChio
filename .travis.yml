@@ -2,5 +2,6 @@ language : python
 python:
   - 3.8
 install:
+  - apt install unixodbc-dev
   - pip3 install pyodbc
 script: python3 domainMock.py
