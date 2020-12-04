@@ -10,4 +10,5 @@ addons:
     - python-mysqldb
 install:
   - pip install pyodbc
+  - pip install requests
 script: python3 domainMock.py
