@@ -281,10 +281,10 @@ def opcionesInicio():
                             )
     respuesta()
             
-def suma(numun,numdos):
-    numun=int(numun)
-    numdos=int(numdos)
-    return numun+numdos
+#def suma(numun,numdos):
+ #   numun=int(numun)
+  #  numdos=int(numdos)
+   # return numun+numdos
 
 def main():
     opening_screen()
