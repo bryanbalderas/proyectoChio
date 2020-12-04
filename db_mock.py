@@ -81,7 +81,7 @@ class TestOperaciones(unittest.TestCase):
         self.assertEqual(esperado, real)
 
     @patch("baseConection.DataBaseInteract.consul_teams_by_trainer", autospec=True)
-    def test_consul_teams_by_trainer(self, MockConsul):
+    def test_consul_teams_by_trainer_dos(self, MockConsul):
         MockConsul.return_value = [{"id_equipo": 1, "team_name": "Obscuros", 
                                 "id_equipo": 2, "team_name": "1ra_gen",
                                 "id_equipo": 3, "team_name": "hierba",
