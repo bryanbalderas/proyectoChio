@@ -7,6 +7,11 @@ addons:
   apt:
     packages:
     - unixodbc-dev
+matrix:
+  - LINT_CHECK="1"
+  - TRANSIFEX="1"
+  - TESTS="1" ODOO_REPO="odoo/odoo"
+  - TESTS="1" ODOO_REPO="OCA/OCB"
 virtualenv:
   system_site_packages: true
 install:
