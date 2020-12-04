@@ -64,8 +64,10 @@ class DataBaseInteract():
         if(self.cursor.execute("DELETE FROM pokemon WHERE id_equipo = '{}'")):
             print("Se borraron los pokemon correctamente")
             self.cnxn_str.commit()
+            return "Se borraron los pokemon correctamente"
         else:
             print("No se eliminó")
+            return "No se eliminó"
 
     def consul_team(self, string_to_search):
         id_to_search = -1
