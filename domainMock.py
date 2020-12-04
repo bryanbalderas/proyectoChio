@@ -24,6 +24,14 @@ class testMockDomain(unittest.TestCase):
      
      assert resultado_esperado==resultado_actual
         
+    @patch('domainInsercion.insertarDatos.eliminarEquipo',return_value="Se borraron los pokemon correctamente")
+    def test_eliminar_equipo(self,mock_get):
+     llamar=insertarDatos()
+    
+     resultado_esperado="Se borraron los pokemon correctamente"
+     resultado_actual=llamar.eliminarEquipo("mock",1)
+     
+     assert resultado_esperado==resultado_actual
         
         
 if __name__ == "__main__":
